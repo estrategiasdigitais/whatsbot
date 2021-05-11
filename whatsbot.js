@@ -11,7 +11,7 @@ venom
 
 function start(client) {
   client.onMessage((message) => {
-    if (message.body === 'Hi' && message.isGroupMsg === false) {
+    if (message.body === 'Ola' && message.isGroupMsg === false) {
       client
         .sendText(message.from, 'Welcome Venom 🕷')
         .then((result) => {

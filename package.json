@@ -1,0 +1,15 @@
+{
+  "name": "whatsbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "whatsbot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "venom-bot": "https://github.com/orkestral/venom/releases/download/nightly/venom-bot-nightly.tgz"
+  }
+}

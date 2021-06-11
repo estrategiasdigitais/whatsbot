@@ -9,17 +9,12 @@ venom
     console.log(erro);
   });
 
-function start(client) {
-  client.onMessage((message) => {
-    if (message.body === 'Ola' && message.isGroupMsg === false) {
-      client
-        .sendText(message.from, 'Welcome Venom 🕷')
-        .then((result) => {
-          console.log('Result: ', result); //return object success
-        })
-        .catch((erro) => {
-          console.error('Error when sending: ', erro); //return object error
-        });
-    }
-  });
+async function start(client) {
+
+  const chats = await client.getAllChatsGroups();
+  //console.log(chats[0]);
+  chats.forEach(chat => {
+    const { user } = chat.id;
+    console.log("id:" + user + " nome:" + chat.name);
+  })
 }
